@@ -441,7 +441,7 @@ a.read-more-btn {
 }
 
 a.read-more-btn:hover {
-  color: #F28123;
+  color: #007223;
 }
 
 a.boxed-btn, a.bordered-btn, a.cart-btn {
@@ -1530,7 +1530,7 @@ input[type="submit"] {
 div.owl-controls, .owl-controls div {
   height: auto;
   top: 50%;
-  color: #F28123;
+  color: #23f234;
   font-size: 48px;
 }
 
