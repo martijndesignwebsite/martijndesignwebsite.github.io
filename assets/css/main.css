@@ -951,12 +951,12 @@ h2.widget-title:after {
 }
 
 .copyright a {
-  color: #F28123;
+  color: #087504;
   font-weight: 700;
 }
 
 .copyright a:hover {
-  color: #f59d53;
+  color: #ffffff;
 }
 
 .social-icons ul {
@@ -993,7 +993,7 @@ h2.widget-title:after {
   content: "\f105";
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
-  color: #F28123;
+  color: #087504;
 }
 
 /* -----------------------------------------------------------------------------
@@ -1127,7 +1127,7 @@ a.tof-btn:hover i {
 }
 
 .footer-box.pages ul li:hover a {
-  color: #F28123;
+  color: #ffffff;
 }
 
 .footer-box.subscribe form button {
@@ -1137,12 +1137,12 @@ a.tof-btn:hover i {
 }
 
 .footer-box.subscribe form button:hover {
-  background-color: #F28123;
+  background-color: #036b11;
   color: #051922;
 }
 
 .social-icons ul li:hover a {
-  color: #F28123;
+  color: #035a00;
 }
 
 .social-icons ul li a {
