@@ -1985,7 +1985,7 @@ span.comment-date {
   padding: 8px 20px 14px;
   text-transform: capitalize;
   text-align: center;
-  border: 2px solid #F28123;
+  border: 2px solid #009e15;
 }
 
 .time-countdown .counter-column .count {
@@ -1994,7 +1994,7 @@ span.comment-date {
   font-size: 30px;
   line-height: 1.4em;
   padding: 0px 0px;
-  color: #F28123;
+  color: #009e15;
   font-weight: 700;
   letter-spacing: 1px;
 }
