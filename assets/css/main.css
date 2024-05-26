@@ -422,6 +422,14 @@ a.boxed-btn {
   padding: 10px 20px;
 }
 
+a.bordered-btn-1 {
+  font-family: 'Poppins', sans-serif;
+  display: inline-block;
+  color: #000000;
+  border: 2px solid #00770a;
+  padding: 7px 20px;
+}
+
 a.bordered-btn {
   font-family: 'Poppins', sans-serif;
   display: inline-block;
@@ -442,6 +450,10 @@ a.read-more-btn {
 
 a.read-more-btn:hover {
   color: #007223;
+}
+
+a.boxed-btn, a.bordered-btn-1, a.cart-btn {
+  border-radius: 50px;
 }
 
 a.boxed-btn, a.bordered-btn, a.cart-btn {
@@ -1001,6 +1013,19 @@ h2.widget-title:after {
 # Hover Styles
 
 ----------------------------------------------------------------------------- */
+
+a.bordered-btn-1 {
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+
+
+a.bordered-btn-1:hover {
+  background-color: #095f01;
+  color: #000000;
+}
+
 a.navbar-brand {
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
@@ -1365,6 +1390,11 @@ a.mobile-show.search-bar-icon:hover {
 # Hero Styles
 
 ----------------------------------------------------------------------------- */
+
+.hero-btns a.bordered-btn-1 {
+  margin-left: 15px;
+}
+
 .hero-bg {
   background-image: url(../img/hero-bg.jpg);
   background-size: cover;
