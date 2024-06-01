@@ -11,7 +11,7 @@ Version: 1.0
 # Base - Genral & Typography
 
 ----------------------------------------------------------------------------- */
-html {
+ html {
   font-size: 14px;
   font-weight: 400;
   line-height: 28px;
@@ -1703,7 +1703,12 @@ p.excerpt {
 }
 
 .single-artcile-bg {
-  background-image: url(../img/latest-news/news-bg-3.jpg);
+  background-image: url(../img/latest-news/DSC_1212.jpeg);
+  height: 450px;
+}
+
+.single-artcile-bg-1 {
+  background-image: url(../img/latest-news/tkleinhoffoto2.jpg);
   height: 450px;
 }
 
