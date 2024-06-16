@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="author" content="CodeHim">
+      <title> Poll UI</title>
+      <!-- Style CSS -->
+      <link rel="stylesheet" href="stylepoll.css">
+      <!-- Demo CSS (No need to include it into your project) -->
+      <link rel="stylesheet" href="demopoll.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+
+      <!-- header -->
+	<div class="top-header-area" id="sticker">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12 col-sm-12 text-center">
+					<div class="main-menu-wrap">
+						<!-- logo -->
+						<div class="site-logo">
+							<a href="index.html">
+							<img src="assets/img/logo.png" alt="">
+								</a>
+						</div>
+						<!-- logo -->
+						
+						<!-- menu start -->
+						<nav class="main-menu">
+							<ul>
+								<li class="current-list-item"><a href="#"></a>
+								</li>
+								<li><a href="index.html">Home</a></li>
+								<li><a href="onzemissie.html">Onze missie</a></li>
+								<li><a href="wat we doen.html">Wat we doen</a></li>
+								<li><a href="voor wie.html">Voor wie</a></li>
+								<li><a href="locaties.html">Locaties</a></li>
+								<li><a href="aanmelden.html">Aanmelden</a></li>
+								<li><a href="about.html">Over Ons</a></li>
+								<li><a href="contact.html">Contact</a></li>
+								<li><a href="gallerij.html">Gallerij</a></li>
+							</ul>
+						</nav>
+						<div class="mobile-menu"></div>
+						<!-- menu end -->
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end header -->
+   </head>
+   <body>
+      <header class="cd__intro">
+         <h1>VZW mett-u</h1>
+         <p>Laat het ons weten</p>
+         <div class="cd__action">
+            <a href="http://127.0.0.1:5500/martijndesignwebsite.github.io/poempoen%20festival.html" title="Back to download and tutorial page" class="cd__btn back">terug</a>
+         </div>
+      </header>
+      <!--$%adsense%$-->
+      <main class="cd__main">
+         <!-- Start DEMO HTML (Use the following code into your project)-->
+         <main>  
+  <form>
+    <header>
+    <p>Laat ons weten of je komt<br /></p>
+    </header>  
+  <div class="poll">
+    <div class="poll-line">      
+    <input type="checkbox" id="opt-1" name="poll" checked>
+      <label for="opt-1">Ik kom</label>      
+      <progress value="65" max="100" class="success">
+    </progress>
+      <span class="progress-value">65%</span>      
+    </div>
+    
+    <div class="poll-line">
+      <input type="checkbox" id="opt-2" name="poll"> <label for="opt-2">Mischien</label>
+    <progress value="12" max="100" class="negative"></progress>
+      <span class="progress-value">12%</span>
+    </div>
+    
+    <div class="poll-line">
+    <input type="checkbox" id="opt-3" name="poll"> <label for="opt-3">Ik kom niet</label>
+    <progress value="23" max="100" class="best-seller"> </progress><span class="progress-value">23%</span>
+    </div>
+  </div>
+    <div class="form-btn">
+      <button type="submit" id="submit" name="submit">Verzend</button>
+    </div>
+      </form>
+</main>
+         <!-- END EDMO HTML (Happy Coding!)-->
+      </main>
+      <footer class="cd__credit">Author: Martijn - Distributed By: <a title="Volg me op instagram" href="https://www.instagram.com/martijnvbn/" target="_blank">Martijnvbn</a></footer>
+      
+      <!-- Script JS -->
+      <script src="scriptpoll.js"></script>
+      <!--$%analytics%$-->
+   </body>
+</html>
