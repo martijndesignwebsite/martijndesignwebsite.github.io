@@ -4,7 +4,6 @@
     background-repeat: no-repeat; /* Voorkomt herhaling van de achtergrond */
     background-position: center; /* Plaatst de achtergrond in het midden van de div */
     padding: 100px 0; /* Voeg wat padding toe naar wens */
-    color: rgb(255, 255, 255); /* Tekstkleur wit voor contrast */
 }
 
 .hero-text {

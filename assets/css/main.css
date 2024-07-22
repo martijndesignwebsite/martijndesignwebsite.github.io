@@ -452,6 +452,20 @@ a.read-more-btn:hover {
   color: #007223;
 }
 
+a.linkto {
+  display: inline-block;
+  margin-top: 15px;
+  color: #051922;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+  font-weight: 700;
+}
+
+a.linkto:hover {
+  color: #4cc539;
+}
+
 a.boxed-btn, a.bordered-btn-1, a.cart-btn {
   border-radius: 50px;
 }
@@ -1684,8 +1698,28 @@ p.blog-meta span i {
 }
 
 p.excerpt {
-  line-height: 1.8;
-  color: #555;
+  line-height: 1,5;
+  color: #505050;
+  
+}
+
+p.exas {
+  line-height: 2,0;
+  color: #06ac00;
+  font-size: large;
+}
+
+p.schuin {
+  line-height: 2,0;
+  color: #065203;
+  font-size: large;
+  font-style: italic;
+}
+
+p.vetgedrukt {
+  line-height: 2,0;
+  color: #000000;
+  font-size: large;
 }
 
 .latest-news a.boxed-btn {
@@ -1710,6 +1744,13 @@ p.excerpt {
 .single-artcile-bg-1 {
   background-image: url(../img/latest-news/tkleinhoffoto2.jpg);
   height: 450px;
+}
+
+.single-artcile-bg-5 {
+  background-image: url(../img/latest-news/foto4.jpg);
+  height: 250px;
+background-position: center;
+background-size: cover;
 }
 
 .pagination-wrap {
