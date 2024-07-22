@@ -1732,6 +1732,12 @@ p.vetgedrukt {
   border-bottom-right-radius: 5px;
 }
 
+.news-text-box-2 {
+  padding: 25px;
+  border-bottom-left-radius: 150px;
+  border-bottom-right-radius: 100px;
+}
+
 .single-latest-news {
   margin-bottom: 30px;
 }
