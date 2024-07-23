@@ -38,7 +38,7 @@
 	$body = ob_get_contents();
 	ob_end_clean();
 	
-	$to = 'martijn.vanbrabant@leerling.viio.be';
+	$to = 'martijn.vanbrabant20@gmail.com';
 
 	$s = mail($to,$subject,$body,$headers,"-t -i -f $from");
 
