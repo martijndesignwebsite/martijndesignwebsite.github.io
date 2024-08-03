@@ -7,7 +7,7 @@
 	<meta name="description" content="Responsive Bootstrap4 Shop Template, Created by Imran Hossain from https://imransdesign.com/">
 
 	<!-- title -->
-	<title>Onze missie</title>
+	<title>Contact</title>
 
 	<!-- favicon -->
 	<link rel="shortcut icon" type="image/png" href="assets/img/favicon.png">
@@ -79,6 +79,25 @@
 		</div>
 	</div>
 	<!-- end header -->
+
+	<!-- search area -->
+	<div class="search-area">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<span class="close-btn"><i class="fas fa-window-close"></i></span>
+					<div class="search-bar">
+						<div class="search-bar-tablecell">
+							<h3>Search For:</h3>
+							<input type="text" placeholder="Keywords">
+							<button type="submit">Search <i class="fas fa-search"></i></button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end search arewa -->
 	
 	<!-- breadcrumb-section -->
 	<div class="breadcrumb-section breadcrumb-bg">
@@ -86,7 +105,7 @@
 			<div class="row">
 				<div class="col-lg-8 offset-lg-2 text-center">
 					<div class="breadcrumb-text">
-						<h1>Onze Missie</h1>
+						<h1>Aanmeldingsformulier</h1>
 					</div>
 				</div>
 			</div>
@@ -94,60 +113,45 @@
 	</div>
 	<!-- end breadcrumb section -->
 
-	<!-- featured section -->
-	
+	<!-- contact form -->
+	<div class="contact-from-section mt-150 mb-150">
 		<div class="container">
-			<div class="feature-bg">
 			<div class="row">
-				<div class="col-lg-7">
-					<div class="featured-text">
-						<h2 class="pb-3">VZW<span class="orange-text"> METT-U</span></h2>
-						<h2 class="pb-3">Onze missie<span</h2>
-						<p></p>
-						<p>Steeds meer horen en zien we om ons heen, de roep om bij te dragen aan een duurzame en gezonde toekomst. Gezonde natuur en biologische landbouw dragen daar rechtstreeks aan bij. Het is direct ook zorgen voor onszelf. Dat willen we graag stimuleren en ondersteunen.
-							METT U wil graag samen met anderen circulair voedsel verbouwen en bijdragen aan gezond eten en natuur. Juist dat samen te doen en te delen met mensen in kwetsbare situaties en andere vrijwilligers, geeft vreugde en vervulling én heerlijk voedsel! 
-							VZW METT U wilt beiden verbinden: samen met kwetsbare mensen en mensen uit de lokale gemeenschap van Heks en Vechmaal (Limburg), voedsel verbouwen op biologische wijze. 
+				<div class="col-lg-8 mb-5 mb-lg-0">
+					<div class="form-title">
+						<h2>Meld je hier aan door deze vraag in te vullen.</h2>
+					</div>
+				 	<div id="form_status"></div>
+					<div class="contact-form">
+						<form type="POST" id="fruitkha-contact" onSubmit="return valid_datas( this );">
+							<p>
+								<input type="text" placeholder="Naam" name="Naam" id="Naam">
+								<input type="number" placeholder="leeftijd" name="leeftijd" id="leeftijd">
 							</p>
-							<div class="single-artcile-bg-5"></div>
-									</div>
-								</div>
-							</div>
+							<p>
+								<input type="text" placeholder="adres" name="adres" id="adres">
+								<input type="tel" placeholder="telefefoonnummer" name="telefefoonnummer" id="telefefoonnummer">
+								<p><textarea name="message" id="bericht" cols="30" rows="10" placeholder="Welk soort werk zou u passen? (zorggast begeleiden, meewerken op het land, activiteiten ondersteunen/ anders?)"></textarea></p>
+								<p><textarea name="message" id="bericht" cols="30" rows="10" placeholder="Motivatie: wat maakt dat u graag een bijdrage zou willen leveren als vrijwilliger? Waar wordt u blij van?"></textarea></p>
+								<p><textarea name="message" id="bericht" cols="30" rows="10" placeholder="Wat brengt u in: wat is uw kracht en/of kwaliteit als het gaat om tuinieren, en/of het ondersteunen van mensen die wat extra’s nodig hebben?"></textarea></p>
+								<p><textarea name="message" id="bericht" cols="30" rows="10" placeholder="Werkt u graag alle maanden van het jaar buiten?"></textarea></p>
+								<p><textarea name="message" id="bericht" cols="30" rows="10" placeholder="Bent u bekend met kleinschalige landbouw die zoveel mogelijk zelfvoorzienend werkt?"></textarea></p>
+								<p><textarea name="message" id="bericht" cols="30" rows="10" placeholder="Bent u bereidt om geregeld samen met de andere vrijwilligers af te stemmen en samen te werken?"></textarea></p>
+								<p><textarea name="message" id="bericht" cols="30" rows="10" placeholder="Hoeveel uren per week of maand bent u beschikbaar?"></textarea></p>
+								<p><textarea name="message" id="bericht" cols="30" rows="10" placeholder="Is er nog iets anders dat u graag aan ons wilt laten weten?"></textarea></p>
+							    <p>Klik op versturen als u klaar bent. We nemen zo spoedig mogelijk contact met u op.</p>
+								<form type="POST" id="fruitkha-contact" onSubmit="return valid_datas( this );">
+							<p><input type="submit" value="versturen"></p>
+						</form>
+					</div>
+				</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-</div>
-	<!-- end featured section -->
-
-	<!-- logo carousel -->
-	<div class="logo-carousel-section">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-12">
-					<div class="logo-carousel-inner">
-						<div class="single-logo-item">
-							<img src="assets/img/company-logos/1.png" alt="">
-						</div>
-						<div class="single-logo-item">
-							<img src="assets/img/company-logos/2.png" alt="">
-						</div>
-						<div class="single-logo-item">
-							<img src="assets/img/company-logos/3.png" alt="">
-						</div>
-						<div class="single-logo-item">
-							<img src="assets/img/company-logos/4.png" alt="">
-						</div>
-						<div class="single-logo-item">
-							<img src="assets/img/company-logos/5.png" alt="">
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- end logo carousel -->
+	<!-- end contact form -->
 
 	<!-- footer -->
 	<div class="footer-area">
@@ -156,7 +160,7 @@
 				<div class="col-lg-3 col-md-6">
 					<div class="footer-box about-widget">
 						<h2 class="widget-title">Over</h2>
-						<p>VZW METT U wil samen met kwetsbare mensen en de lokale gemeenschap van Heks en Vechmaal biologisch voedsel verbouwen. Dit draagt bij aan een duurzame en gezonde toekomst en zorgt voor vreugde en vervulling voor iedereen.l.</p>
+						<p>VZW METT U wil samen met kwetsbare mensen en de lokale gemeenschap van Heks en Vechmaal biologisch voedsel verbouwen. Dit draagt bij aan een duurzame en gezonde toekomst en zorgt voor vreugde en vervulling voor iedereen.</p>
 					</div>
 				</div>
 				<div class="col-lg-3 col-md-6">
@@ -173,12 +177,12 @@
 						<h2 class="widget-title">Pagina's</h2>
 						<ul>
 							<li><a href="index.html">Home</a></li>
+							<li><a href="about.html">Over ons</a></li>
 							<li><a href="onzemissie.html">Onze missie</a></li>
 							<li><a href="wat we doen.html">Wat we doen</a></li>
 							<li><a href="voor wie.html">Voor wie</a></li>
-							<li><a href="locaties.html">Locaties</a></li>
-							<li><a href="aanmelden.html">Vrijwilliger en/of lid worden</a></li>
-							<li><a href="about.html">Over ons</a></li>
+							<li><a href="nieuws.html">Nieuws</a></li>
+							<li><a href="vrijwilligen.html">Vrijwilligen en/of lid worden</a></li>
 							<li><a href="contact.html">Contact</a></li>
 						</ul>
 					</div>
@@ -198,28 +202,28 @@
 	</div>
 	<!-- end footer -->
 	
-		<!-- copyright -->
-		<div class="copyright">
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-6 col-md-12">
-						<p>VZW &copy; 2024 - <a href="https://www.kleinhof.be/">Mett u</a>,  Officieel</p>
-					</div>
-					<div class="col-lg-6 text-right col-md-12">
-						<div class="social-icons">
-							<ul>
-								<li><a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
-								<li><a href="#" target="_blank"><i class="fab fa-twitter"></i></a></li>
-								<li><a href="#" target="_blank"><i class="fab fa-instagram"></i></a></li>
-								<li><a href="#" target="_blank"><i class="fab fa-linkedin"></i></a></li>
-								<li><a href="#" target="_blank"><i class="fab fa-dribbble"></i></a></li>
-							</ul>
-						</div>
+	<!-- copyright -->
+	<div class="copyright">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6 col-md-12">
+					<p>VZW &copy; 2024 - <a href="index.html">Mett u</a>,  Officieel</p>
+				</div>
+				<div class="col-lg-6 text-right col-md-12">
+					<div class="social-icons">
+						<ul>
+							<li><a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+							<li><a href="#" target="_blank"><i class="fab fa-twitter"></i></a></li>
+							<li><a href="#" target="_blank"><i class="fab fa-instagram"></i></a></li>
+							<li><a href="#" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+							<li><a href="#" target="_blank"><i class="fab fa-dribbble"></i></a></li>
+						</ul>
 					</div>
 				</div>
 			</div>
 		</div>
-		<!-- end copyright -->
+	</div>
+	<!-- end copyright -->
 	
 	<!-- jquery -->
 	<script src="assets/js/jquery-1.11.3.min.js"></script>
@@ -239,8 +243,10 @@
 	<script src="assets/js/jquery.meanmenu.min.js"></script>
 	<!-- sticker js -->
 	<script src="assets/js/sticker.js"></script>
+	<!-- form validation js -->
+	<script src="assets/js/form-validate.js"></script>
 	<!-- main js -->
 	<script src="assets/js/main.js"></script>
-
+	
 </body>
 </html>
