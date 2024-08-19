@@ -454,7 +454,6 @@ a.read-more-btn:hover {
 
 a.linkto {
   display: inline-block;
-  margin-top: 15px;
   color: #051922;
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
@@ -510,7 +509,7 @@ a.boxed-btn, a.bordered-btn, a.cart-btn {
 }
 
 .breadcrumb-text p {
-  color: #007510;
+  color: #b5bbb6;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 7px;
@@ -1079,7 +1078,7 @@ ul.sub-menu a {
 }
 
 ul.sub-menu li:hover a {
-  color: #F28123;
+  color: #48c500;
 }
 
 .single-tof-box {
