@@ -21,7 +21,7 @@
 	
 	ob_start();
 	?>
-		Hoi Mett-u beheerder!<br /><br />
+		Hoi METT-U beheerder!<br /><br />
 		<?php echo ucfirst( $name ); ?>  heeft je een bericht geschreven via de website.
 		<br /><br />
 		
@@ -38,7 +38,7 @@
 	$body = ob_get_contents();
 	ob_end_clean();
 	
-	$to = 'martijn.vanbrabant20@gmail.com';
+	$to = 'contact@mett-u.be';
 
 	$s = mail($to,$subject,$body,$headers,"-t -i -f $from");
 
