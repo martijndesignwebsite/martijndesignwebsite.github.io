@@ -1458,6 +1458,14 @@ html, body {
   font-size: 15px;
 }
 
+.hero-text p.subtitle-herotext {
+  color: #23f261;
+  font-weight: 750;
+  text-transform: uppercase;
+  letter-spacing: 7px;
+  font-size: 15px;
+}
+
 .hero-text h1 {
   font-size: 64px;
   font-weight: 700;
