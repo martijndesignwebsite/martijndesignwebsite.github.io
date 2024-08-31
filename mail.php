@@ -43,7 +43,7 @@
 	$s = mail($to,$subject,$body,$headers,"-t -i -f $from");
 
 	if( $s == 1 ){
-		echo '<div class="success"><i class="fas fa-check-circle"></i><h3>Thank You!</h3>Je bericht is succesvol aangekomen.</div>';
+		echo '<div class="success"><i class="fas fa-check-circle"></i><h3>Bedankt</h3>Je bericht is succesvol aangekomen.</div>';
 	}else{
 		echo '<div>Er is een fout opgetreden.</div>';
 	}
