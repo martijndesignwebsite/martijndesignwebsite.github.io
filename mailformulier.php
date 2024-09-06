@@ -4,7 +4,7 @@
 		echo '<span class="notice">Error!</span>';
 		exit;
 	}
-	if( $_POST['token'] != '402d29a4-692d-485a-a7c5-d101f008eb1e' ){
+	if( $_POST['token'] != '066be032-767e-414b-9d08-d60d0261aad3' ){
 		echo '<span class="notice">Error!</span>';
 		exit;
 	}
@@ -73,7 +73,7 @@
 	$body = ob_get_contents();
 	ob_end_clean();
 	
-	$to = 'martijn.vanbrabant20@gmail.com';
+	$to = '066be032-767e-414b-9d08-d60d0261aad3';
 
 	$s = mail($to,$subject,$body,$headers,"-t -i -f $from");
 
