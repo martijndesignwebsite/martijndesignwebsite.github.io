@@ -1,7 +1,9 @@
 <?php
+session_start();  // Start de sessie voor tokenvalidatie
+
 // Tokenvalidatie
-if (empty($_POST['token']) || $_POST['token'] != 'FsWga4&@f6aw') {
-    echo '<span class="notice">Error! Ongeldig token.</span>';
+if (empty($_POST['token']) || $_POST['token'] !== $_SESSION['token']) {
+    echo '<span class="notice">Error! Ongeldige token. Probeer het formulier opnieuw in te dienen.</span>';
     exit;
 }
 
@@ -25,8 +27,8 @@ if (!filter_var($from, FILTER_VALIDATE_EMAIL)) {
 }
 
 // E-mail headers instellen
-$headers = "From: Form Contact <$from>\r\n";
-$headers .= "Reply-To: $from\r\n";
+$headers = "From: Contact Form <noreply@mett-u.be>\r\n";  // Vast "From"-adres
+$headers .= "Reply-To: $from\r\n";  // Zorgt ervoor dat bij een reply, de gebruiker als ontvanger wordt ingesteld
 $headers .= "MIME-Version: 1.0\r\n";
 $headers .= "Content-Type: text/html; charset=UTF-8\r\n";
 
@@ -34,7 +36,7 @@ $headers .= "Content-Type: text/html; charset=UTF-8\r\n";
 ob_start();
 ?>
 Hoi METT-U beheerder!<br /><br />
-<strong><?php echo ucfirst($name); ?></strong> heeft je een bericht geschreven via de website.
+<strong><?php echo ucfirst($name); ?></strong> heeft je een bericht gestuurd via de website.
 <br /><br />
 <strong>Naam:</strong> <?php echo ucfirst($name); ?><br />
 <strong>Email:</strong> <?php echo $from; ?><br />
@@ -53,9 +55,11 @@ $to = 'contact@mett-u.be';  // Pas dit aan naar je eigen e-mailadres
 
 // Verzenden van de e-mail
 if (mail($to, $subject, $body, $headers)) {
-    echo '<div class="success"><i class="fas fa-check-circle"></i><h3>Bedankt</h3>Je bericht is succesvol verstuurd.</div>';
+    echo '<div class="success"><h3>Bedankt!</h3>Je bericht is succesvol verzonden.</div>';
 } else {
     echo '<div>Er is een fout opgetreden bij het verzenden van je bericht. Probeer het later opnieuw.</div>';
 }
 
+// Token ongeldig maken na gebruik (CSRF-token moet eenmalig gebruikt worden)
+unset($_SESSION['token']);
 ?>
