@@ -51,16 +51,14 @@
 						<!-- logo -->
 						<div class="site-logo">
 							<a href="index.html">
-							<img src="assets/img/logo.png" alt="">
-								</a>
+							<img src="assets/img/logo.png" alt="Logo">
+							</a>
 						</div>
 						<!-- logo -->
 						
 						<!-- menu start -->
 						<nav class="main-menu">
 							<ul>
-								<li class="current-list-item"><a href="#"></a>
-								</li>
 								<li><a href="index.html">Home</a></li>
 								<li><a href="about.html">Over Ons</a></li>
 								<li><a href="onzemissie.html">Onze missie</a></li>
@@ -68,7 +66,7 @@
 								<li><a href="voor wie.html">Voor wie</a></li>
 								<li><a href="nieuws.html">Nieuws</a></li>
 								<li><a href="vrijwilligen.html">Vrijwilligen en/of lid worden</a></li>
-								<li><a href="contact.html">Contact</a></li>
+								<li class="current-list-item"><a href="contact.php">Contact</a></li>
 							</ul>
 						</nav>
 						<div class="mobile-menu"></div>
@@ -80,25 +78,6 @@
 	</div>
 	<!-- end header -->
 
-	<!-- search area -->
-	<div class="search-area">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-12">
-					<span class="close-btn"><i class="fas fa-window-close"></i></span>
-					<div class="search-bar">
-						<div class="search-bar-tablecell">
-							<h3>Search For:</h3>
-							<input type="text" placeholder="Keywords">
-							<button type="submit">Search <i class="fas fa-search"></i></button>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- end search arewa -->
-	
 	<!-- breadcrumb-section -->
 	<div class="breadcrumb-section breadcrumb-bg">
 		<div class="container">
@@ -119,29 +98,40 @@
 			<div class="row">
 				<div class="col-lg-8 mb-5 mb-lg-0">
 					<div class="form-title">
-						<h2>Contact formulier werkt tijdelijk niet</h2>
-						<h2>neem contact met ons op door een email te sturen naar contact@mett-u.be</h2>
 						<h2>Heb je vragen?</h2>
 						<p>Vul dit formulier in of zoek contact op via telefoon of email.</p>
 					</div>
 				 	<div id="form_status"></div>
 					<div class="contact-form">
-						<form type="POST" id="fruitkha-contact" onSubmit="return valid_datas( this );">
+						<form action="mail.php" method="POST" id="fruitkha-contact" onSubmit="return valid_datas( this );">
 							<p>
-								<input type="text" placeholder="Naam" name="Naam" id="Naam">
-								<input type="email" placeholder="Email" name="email" id="email">
+								<input type="text" placeholder="Naam" name="Naam" id="Naam" required>
+								<input type="email" placeholder="Email" name="email" id="email" required>
 							</p>
 							<p>
-								<input type="tel" placeholder="telefoon" name="telefoon" id="telefoon">
+								<input type="tel" placeholder="Telefoon" name="telefoon" id="telefoon">
 								<input type="text" placeholder="Onderwerp" name="Onderwerp" id="Onderwerp">
 							</p>
-							<p><textarea name="message" id="bericht" cols="30" rows="10" placeholder="Bericht"></textarea></p>
-							<input type="hidden" name="token" value="FsWga4&@f6aw" />
+							<p><textarea name="bericht" id="bericht" cols="30" rows="10" placeholder="Bericht" required></textarea></p>
+
+							<!-- PHP code to generate CSRF token -->
+							<?php
+							session_start();
+							$_SESSION['token'] = bin2hex(random_bytes(32));  // Generate CSRF token
+							?>
+							<input type="hidden" name="token" value="<?php echo $_SESSION['token']; ?>" />
+
 							<p><input type="submit" value="Verzend"></p>
 						</form>
 					</div>
 				</div>
-						</div>
+				<!-- Additional contact information section -->
+				<div class="col-lg-4">
+					<div class="contact-info-box">
+						<h4>Contact informatie</h4>
+						<p>Email: <a href="mailto:contact@mett-u.be">contact@mett-u.be</a></p>
+						<p>Telefoon: +32 123 456 789</p>
+						<p>Adres: Mett-U Straat 12, 1000 Brussel, België</p>
 					</div>
 				</div>
 			</div>
@@ -155,18 +145,14 @@
 			<div class="row">
 				<div class="col-lg-3 col-md-6">
 					<div class="footer-box about-widget">
-						<h2 class="widget-title">Over</h2>
-						<p>METT-U wordt gedragen door het bestuur en vrijwilligers. Het is belangrijk dat zorggasten én vrijwilligers, op ons kunnen rekenen. We staan voor duidelijke afspraken, gerichte begeleiding, een vaste planning van de werkzaamheden (waar mogelijk) en een liefdevolle omgeving. Op deze manier streven we naar een fijne en constructieve samenwerking, tussen de zorggasten, de vrijwilligers en andere mensen uit onze gemeenschap. Samen willen we een duurzaam en circulair bijdragen aan goed voedsel en aan de natuur in een prettige en ontspannen sfeer.</p>
+						<h2 class="widget-title">Over ons</h2>
+						<p>METT-U wordt gedragen door het bestuur en vrijwilligers. Het is belangrijk dat zorggasten én vrijwilligers, op ons kunnen rekenen...</p>
 					</div>
 				</div>
 				<div class="col-lg-3 col-md-6">
 					<div class="footer-box get-in-touch">
-						<h2 class="widget-title">Vragen:</h2>
-						<a href="contact.html" class="boxed-btn">mail ons</a>
-						<ul>
-							<li></li>
-							<li></li>
-						</ul>
+						<h2 class="widget-title">Vragen?</h2>
+						<a href="contact.php" class="boxed-btn">Mail ons</a>
 					</div>
 				</div>
 				<div class="col-lg-3 col-md-6">
@@ -177,12 +163,10 @@
 							<li><a href="onzemissie.html">Onze missie</a></li>
 							<li><a href="wat we doen.html">Wat we doen</a></li>
 							<li><a href="voor wie.html">Voor wie</a></li>
-							<li><a href="locaties.html">Locaties</a></li>
-							<li><a href="aanmelden.html">Aanmelden</a></li>
-							<li><a href="about.html">Over ons</a></li>
-							<li><a href="contact.html">Contact</a></li>
+							<li><a href="contact.php">Contact</a></li>
 						</ul>
 					</div>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -193,7 +177,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-6 col-md-12">
-					<p>VZW &copy; 2024 - <a href="index.html">METT-U</a>,  Officieel</p>
+					<p>VZW &copy; 2024 - <a href="index.html">METT-U</a>, Officieel</p>
 				</div>
 				<div class="col-lg-6 text-right col-md-12">
 					<div class="social-icons">
@@ -202,37 +186,7 @@
 							<li><a href="#" target="_blank"><i class="fab fa-twitter"></i></a></li>
 							<li><a href="#" target="_blank"><i class="fab fa-instagram"></i></a></li>
 							<li><a href="#" target="_blank"><i class="fab fa-linkedin"></i></a></li>
-							<li><a href="#" target="_blank"><i class="fab fa-dribbble"></i></a></li>
 						</ul>
 					</div>
 				</div>
-			</div>
-		</div>
-	</div>
-	<!-- end copyright -->
-	
-	<!-- jquery -->
-	<script src="assets/js/jquery-1.11.3.min.js"></script>
-	<!-- bootstrap -->
-	<script src="assets/bootstrap/js/bootstrap.min.js"></script>
-	<!-- count down -->
-	<script src="assets/js/jquery.countdown.js"></script>
-	<!-- isotope -->
-	<script src="assets/js/jquery.isotope-3.0.6.min.js"></script>
-	<!-- waypoints -->
-	<script src="assets/js/waypoints.js"></script>
-	<!-- owl carousel -->
-	<script src="assets/js/owl.carousel.min.js"></script>
-	<!-- magnific popup -->
-	<script src="assets/js/jquery.magnific-popup.min.js"></script>
-	<!-- mean menu -->
-	<script src="assets/js/jquery.meanmenu.min.js"></script>
-	<!-- sticker js -->
-	<script src="assets/js/sticker.js"></script>
-	<!-- form validation js -->
-	<script src="assets/js/form-validate.js"></script>
-	<!-- main js -->
-	<script src="assets/js/main.js"></script>
-	
-</body>
-</html>
+			</

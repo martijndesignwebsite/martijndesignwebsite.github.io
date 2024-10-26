@@ -11,8 +11,8 @@ if (empty($_POST['token']) || $_POST['token'] !== $_SESSION['token']) {
 $name = isset($_POST['Naam']) ? htmlspecialchars(trim($_POST['Naam'])) : '';
 $from = isset($_POST['email']) ? htmlspecialchars(trim($_POST['email'])) : '';
 $phone = isset($_POST['telefoon']) ? htmlspecialchars(trim($_POST['telefoon'])) : '';
-$subject = isset($_POST['Onderwerp']) ? stripslashes(nl2br(htmlspecialchars(trim($_POST['Onderwerp'])))) : '';
-$message = isset($_POST['bericht']) ? stripslashes(nl2br(htmlspecialchars(trim($_POST['bericht'])))) : '';
+$subject = isset($_POST['Onderwerp']) ? htmlspecialchars(trim($_POST['Onderwerp'])) : 'Geen onderwerp';
+$message = isset($_POST['bericht']) ? htmlspecialchars(trim($_POST['bericht'])) : '';
 
 // Controleer of de verplichte velden zijn ingevuld
 if (empty($name) || empty($from) || empty($message)) {
@@ -33,22 +33,17 @@ $headers .= "MIME-Version: 1.0\r\n";
 $headers .= "Content-Type: text/html; charset=UTF-8\r\n";
 
 // E-mailinhoud opbouwen
-ob_start();
-?>
-Hoi METT-U beheerder!<br /><br />
-<strong><?php echo ucfirst($name); ?></strong> heeft je een bericht gestuurd via de website.
-<br /><br />
-<strong>Naam:</strong> <?php echo ucfirst($name); ?><br />
-<strong>Email:</strong> <?php echo $from; ?><br />
-<strong>Telefoon:</strong> <?php echo $phone; ?><br />
-<strong>Onderwerp:</strong> <?php echo $subject; ?><br />
-<strong>Bericht:</strong><br /><br />
-<?php echo $message; ?>
-<br /><br />
-============================================================
-<?php
-$body = ob_get_contents();
-ob_end_clean();
+$body = "
+    Hoi METT-U beheerder!<br /><br />
+    <strong>" . ucfirst($name) . "</strong> heeft je een bericht gestuurd via de website.<br /><br />
+    <strong>Naam:</strong> " . ucfirst($name) . "<br />
+    <strong>Email:</strong> " . $from . "<br />
+    <strong>Telefoon:</strong> " . $phone . "<br />
+    <strong>Onderwerp:</strong> " . $subject . "<br />
+    <strong>Bericht:</strong><br /><br />
+    " . nl2br($message) . "<br /><br />
+    ============================================================
+";
 
 // E-mailadres van de ontvanger
 $to = 'contact@mett-u.be';  // Pas dit aan naar je eigen e-mailadres

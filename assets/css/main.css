@@ -1104,13 +1104,21 @@ a.video-play-btn {
 
 a.video-play-btn:hover {
   background-color: #333;
-  color: #F28123;
+  color: #046401;
 }
 
 .latest-news-bg {
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;
+}
+
+.single-latest-news {
+  height: 1000px; /* Kies een vaste hoogte die genoeg ruimte biedt voor de meeste teksten */
+  overflow: hidden; /* Zorgt ervoor dat extra tekst niet buiten het kader komt */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Verdeel ruimte binnen het kader */
 }
 
 .single-latest-news:hover .latest-news-bg {
@@ -1607,6 +1615,74 @@ div.owl-controls, .owl-controls div {
 
 /* -----------------------------------------------------------------------------
 
+
+# location styles
+
+----------------------------------------------------------------------------- */
+
+.locatie-bg {
+  position: relative;
+  height: 250px; /* Pas de hoogte aan voor de gewenste weergave */
+  background-size: cover;
+  background-position: center;
+  border-radius: 8px; /* Maakt de randen mooi afgerond */
+  overflow: hidden;
+}
+
+.locatie-bg-2 {
+  background-image: url(../img/latest-news/news-bg-2.jpg); /* Vervang met de juiste afbeelding URL */
+}
+
+.locatie-text-box {
+  background: rgba(6, 51, 0, 0.6); /* Half-transparante overlay */
+  padding: 20px;
+  color: #fff;
+  border-radius: 0 0 8px 8px;
+}
+
+.locatie-text-box h3 a {
+  color: #fff;
+  font-size: 1.5em;
+  text-decoration: none;
+}
+
+.locatie-text-box .excerpt {
+  margin-top: 10px;
+  font-size: 1em;
+}
+
+.read-more-btn {
+  display: inline-block;
+  color: #fff;
+  text-decoration: none;
+  margin-top: 10px;
+  padding: 8px 15px;
+  background-color: #28a745;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.read-more-btn:hover {
+  background-color: #218838;
+}
+
+.boxed-btn {
+  padding: 12px 30px;
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 1.2em;
+  transition: background-color 0.3s ease;
+}
+
+.boxed-btn:hover {
+  background-color: #0056b3;
+}
+
+/* -----------------------------------------------------------------------------
+
+
 # List Styles
 
 ----------------------------------------------------------------------------- */
@@ -1655,12 +1731,19 @@ div.owl-controls, .owl-controls div {
 
 .news-bg-2 {
   background-image: url(../img/latest-news/de\ moestuin\ heks.jpg);
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  padding-bottom: 100%; /* Voor een 16:9 verhouding */
 }
 
 .news-bg-3 {
-  background-image: url(../img/latest-news/news-bg-3.jpg);
+  background-image: url(../img/latest-news/news-bg-2.jpg);
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  padding-bottom: 100%; /* Voor een 16:9 verhouding */
 }
-
 .news-bg-4 {
   background-image: url(../img/latest-news/news-bg-4.jpg);
 }
@@ -1678,7 +1761,7 @@ div.owl-controls, .owl-controls div {
   background-size: cover;
   background-position: center;
   border-radius: 10px;
-  background-color: #ddd;
+  background-color: #dddddd;
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
 }
@@ -1690,7 +1773,7 @@ div.owl-controls, .owl-controls div {
 }
 
 .single-latest-news h3 a {
-  color: #051922;
+  color: #1a1a1a;
 }
 
 p.blog-meta span {
@@ -2144,8 +2227,8 @@ p.testimonial-body {
 ----------------------------------------------------------------------------- */
 a.video-play-btn {
   position: absolute;
-  background-color: #F28123;
-  color: #051922;
+  background-color: #075300;
+  color: #ffffff;
   width: 90px;
   height: 90px;
   text-align: center;
